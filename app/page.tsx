@@ -65,7 +65,7 @@ export default function Home() {
 
             <div className="grid grid-cols-2 gap-3">
               {STATS.map((stat, idx) => (
-                <div key={idx} className="bg-stone-50 border border-neutral-200 rounded-2xl p-4 text-center hover:bg-stone-300 hover:shadow-md transition-all">
+                <div key={idx} className="bg-stone-50 border border-neutral-200 rounded-2xl p-4 text-center hover:bg-stone-300 hover:shadow-md transition-all flex-1 flex flex-col justify-center size-full">
                   <p className="font-bold text-xl text-black">{stat.value}</p>
                   <p className="text-xs text-stone-600 uppercase tracking-tight">{stat.label}</p>
                 </div>
@@ -122,7 +122,7 @@ export default function Home() {
       </div>
       <div className="bg-stone-800 w-full p-10 text-white">
         <div className="max-w-3xl mx-auto">
-          <p className="text-xl font-semibold">Get in touch</p>
+          <p className="text-2xl font-semibold">Get in touch</p>
           <p className="mt-2">Feel free to reach out to me via email or connect with me on LinkedIn. I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
 
           <div className="flex flex-row gap-2 items-center my-3">
