@@ -1,187 +1,141 @@
-import BackgroundStar from "@/components/BackgroundStar";
 import Card from "@/components/Card";
-import { File, Github, Linkedin, Mail } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
+import ProgressBar from "@/components/ProgressBar";
+import SkillCard from "@/components/SkillCard";
+import { File, Github, Linkedin, Mail, MapPin } from "lucide-react";
+
+const IVY_LOGO = "{ivy.}";
+
+const SOCIAL_LINKS = [
+  { icon: File, href: "/pdf/CV_IvetteSanjurjo.pdf", label: "CV" },
+  { icon: Github, href: "https://github.com/ivetetetete", label: "GitHub" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/ivette-sanjurjo-martínez/", label: "LinkedIn" },
+  { icon: Mail, href: "mailto:ivettes.business@gmail.com", label: "Email" },
+];
+
+const STATS = [
+  { label: "years of experience", value: "2 and a half" },
+  { label: "projects end to end", value: "7" },
+  { label: "development team", value: "Lead" },
+  { label: "coffees consumed", value: "100+" },
+];
 
 export default function Home() {
   return (
     <>
-      <BackgroundStar />
 
-      <div className="flex min-h-screen pt-12 bg-transparent relative font-sans">
-        <main className="max-w-5xl w-full flex flex-col  mx-auto space-y-3 p-5">
-          <div className="lg:flex lg:flex-row justify-center space-y-3 lg:space-x-7 items-center">
-            <div className="rounded-full bg-neutral-400 mx-auto size-40 overflow-hidden">
-              <Image
-                // className="rounded-full size-40"
-                src="/profile.jpeg"
-                alt="Profile picture"
-                objectFit="cover"
-                width={160}
-                height={160}
-              // style={{
-              //   maxWidth: '100%',
-              //   maxHeight: '100%',
-              // }}
-              />
-            </div>
-            <div className="">
-              <h1 className="font-bold text-4xl text-black text-center lg:text-6xl lg:text-right">Front-end developer</h1>
-              <p className="text-center lg:text-right text-black lg:text-4xl">Ivette Sanjurjo Martínez</p>
+      <div className="flex min-h-screen flex-col items-center gap-8 pt-12 pb-20 max-w-3xl mx-auto">
 
-              {/* Social media */}
-              <div className="flex flex-wrap gap-2 items-center mx-auto w-fit mt-2 lg:mr-0">
-                <a className="flex flex-row space-x-2 items-center border border-neutral-400 rounded-md p-2 w-fit hover:p-3 hover:transition-all focus:bg-pink-300 focus:border-pink-400 transition-all focus:text-black" href="/pdf/CV_IvetteSanjurjo.pdf" target="_blank">
-                  <File className="size-3 text-black" />
-                  <p className="text-xs text-black">CV</p>
-                </a>
+        <section className="px-5 text-center w-full">
+          <h1 className="text-black text-6xl font-semibold typewriter">{IVY_LOGO}</h1>
+          <h2 className="text-black text-2xl font-medium my-4">Frontend Developer</h2>
 
-                <a className="flex flex-row space-x-2 items-center border border-neutral-400 rounded-md p-2 w-fit hover:p-3 hover:transition-all focus:bg-pink-300 focus:border-pink-400 transition-all focus:text-black" href="https://github.com/ivetetetete" target="_blank">
-                  <Github className="size-3 text-black" />
-                  <p className="text-xs text-black">GitHub</p>
-                </a>
-
-                <a className="flex flex-row space-x-2 items-center border border-neutral-400 rounded-md p-2 w-fit hover:p-3 hover:transition-all focus:bg-pink-300 focus:border-pink-400 transition-all focus:text-black" href="https://www.linkedin.com/in/ivette-sanjurjo-mart%C3%ADnez/" target="_blank">
-                  <Linkedin className="size-3 text-blue-700" />
-                  <p className="text-xs text-black">LinkedIn</p>
-                </a>
-
-                <a className="flex flex-row space-x-2 items-center border border-neutral-400 rounded-md p-2 w-fit hover:p-3 hover:transition-all focus:bg-pink-300 focus:border-pink-400 transition-all focus:text-black" href="mailto:ivettes.business@gmail.com" target="_blank">
-                  <Mail className="size-3 text-red-600" />
-                  <p className="text-xs text-black">Mail</p>
-                </a>
-
-              </div>
-            </div>
+          <div className="flex flex-wrap gap-3 justify-center">
+            {SOCIAL_LINKS.map((link, idx) => (
+              <a
+                key={idx}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center border border-neutral-400 rounded-md p-2 transition-all hover:bg-stone-200 hover:scale-110 active:bg-stone-300"
+              >
+                <link.icon className="size-5 text-black" />
+              </a>
+            ))}
           </div>
 
-          {/* About me section */}
-          <section className="my-3">
-            <div className="relative w-fit">
-              <div className="bg-pink-300/50 rotate-3 absolute top-0 -left-2 h-10 w-48 z-0" />
-              <p className="text-4xl font-bold text-black text-left w-fit z-10 relative ">About me</p>
-            </div>
-            <div className="mt-2">
-              <p className="text-black">Hi! I&apos;m Ivette Sanjurjo Martínez, a <span className="font-semibold text-pink-400">passionate</span> front-end developer with <span className="font-semibold text-pink-400">2 years hands-on experience</span>. I love creating multiplatform apps that provide seamless user experiences across devices.</p>
-            </div>
-          </section>
+          <p className="text-black mt-6 leading-relaxed">
+            Hi! I&apos;m Ivette Sanjurjo Martínez, a <span className="font-semibold text-stone-500">passionate</span> front-end developer with <span className="font-semibold text-stone-500">2 and a half years hands-on experience</span>. I love creating multiplatform apps that provide seamless user experiences across devices.
+          </p>
+        </section>
 
-          {/* Professional experience section */}
-          <section className="my-3">
-            <div className="w-fit">
-              <p className="text-4xl font-bold text-black text-left w-fit">
-                <span className="inline-block bg-pink-300/50 px-2 py-1 rotate-1">Professional experience</span>
+        {/* JOURNEY & STATS */}
+        <section className="px-5 w-full">
+          <div className="bg-white drop-shadow-md rounded-3xl p-6 flex flex-col gap-6 transition-all">
+            <div>
+              <h3 className="text-black text-2xl font-semibold mb-2">My journey</h3>
+              <p className="text-black text-sm leading-relaxed opacity-90">
+                Just a girl who loves coding and coffee. I´m a web and mobile app developer passionate about building products that don’t just work well, but genuinely feel good to use. I focus on creating meaningful digital experiences with accessibility and inclusion always in mind.
+              </p>
+
+              <p className="text-black text-lg mt-2.5">Frontend Developer - Twentic (October 2023 - Present)</p>
+              <p className="text-black text-sm leading-relaxed opacity-90">
+                I have worked in significant projects for different clients, contributing to the development and maintenance of their applications. Learning and enforcing different frameworks and best practices has been a key part of my role.
               </p>
             </div>
-            <div className="mt-3">
-              <div className="bg-white p-2 w-fit">
-                <Image
-                  src="/twentic.png"
-                  alt="Twentic"
-                  objectFit="cover"
-                  width={150}
-                  height={150}
-                  className="rounded"
-                />
-              </div>
-              <p className="text-black mt-2 font-semibold">October 2023 - Present</p>
-              <p className="text-black">I have worked in significant projects for different clients, contributing to the development and maintenance of their applications. Learning and enforcing different frameworks and best practices has been a key part of my role.</p>
+
+            <div className="grid grid-cols-2 gap-3">
+              {STATS.map((stat, idx) => (
+                <div key={idx} className="bg-stone-50 border border-neutral-200 rounded-2xl p-4 text-center hover:bg-stone-300 hover:shadow-md transition-all">
+                  <p className="font-bold text-xl text-black">{stat.value}</p>
+                  <p className="text-xs text-stone-600 uppercase tracking-tight">{stat.label}</p>
+                </div>
+              ))}
             </div>
-          </section>
-
-          {/* Projects section */}
-          <section>
-            <div className="relative w-fit my-3">
-              <div className="bg-pink-300/50 rotate-3 absolute top-0 -left-2 h-10 w-44 z-0" />
-              <p className="text-4xl font-bold text-black text-left w-fit z-10 relative ">My work</p>
-            </div>
-            {/* Projects cards */}
-            <div className="flex flex-col w-full lg:flex-row lg:items-center gap-3">
-              <Card
-                title="Safinder"
-                description="App created with React Native and Firebase. A dating app designed exclusively for lesbian women and non-binary people. Connect through meaningful weekly questions and discover your ideal partner with Safinder."
-                link="https://safinder.es"
-                imageSrc="/safinder.png"
-                technologies={[
-                  { name: "React Native", color: "blue" },
-                  { name: "Tailwind CSS", color: "purple" },
-                  { name: "TypeScript", color: "teal" },
-                  { name: "Expo", color: "yellow" },
-                  { name: "Firebase", color: "orange" },
-                ]}
-                isInProgress={true}
-              />
-
-              <Card
-                title="Motia"
-                description="Motia is a mobile app built with React Native and Firebase that helps users find rides and share their journeys. With a user-friendly interface and real-time updates, Motia connects drivers and passengers for a seamless carpooling experience."
-                link=""
-                imageSrc="/motia.png"
-                technologies={[
-                  { name: "React Native", color: "blue" },
-                  { name: "Tailwind CSS", color: "purple" },
-                  { name: "TypeScript", color: "teal" },
-                  { name: "Expo", color: "yellow" },
-                  { name: "Firebase", color: "orange" },
-                ]}
-                isInProgress={true}
-              />
-            </div>
-
-          </section>
-
-          {/* Skills section */}
-          <section className="my-3">
-            <div className="relative w-fit my-3">
-              <div className="bg-pink-300/50 rotate-3 absolute top-0 -left-2 h-10 w-32 z-0" />
-              <p className="text-4xl font-bold text-black text-left w-fit z-10 relative ">Skills</p>
-            </div>
-            <div className="mt-2 flex flex-row flex-wrap gap-3 items-center">
-              <div className="bg-[#61DBFB] border-dashed border-2 border-[#3fa3bc] rounded-4xl p-1.5 w-fit max-w-32 min-w-16 hover:rotate-3 transition-all">
-                <p className="text-[#487b88] font-semibold text-xs text-center">React Native</p>
-              </div>
-              <div className="bg-yellow-200 border-dashed border-2 border-yellow-400 rounded-4xl p-1.5 w-fit max-w-32 min-w-16 hover:rotate-3 transition-all">
-                <p className="text-yellow-600 font-semibold text-xs text-center">HTML</p>
-              </div>
-              <div className="bg-purple-200 border-dashed border-2 border-purple-400 rounded-4xl p-1.5 w-fit max-w-32 min-w-16 hover:rotate-3 transition-all">
-                <p className="text-purple-600 font-semibold text-xs text-center">PHP</p>
-              </div>
-              <div className="bg-blue-200 border-dashed border-2 border-blue-400 rounded-4xl p-1.5 w-fit max-w-32 min-w-16 hover:rotate-3 transition-all">
-                <p className="text-blue-600 font-semibold text-xs text-center">Tailwind CSS</p>
-              </div>
-              <div className="bg-amber-200 border-dashed border-2 border-amber-400 rounded-4xl p-1.5 w-fit max-w-32 min-w-16 hover:rotate-3 transition-all">
-                <p className="text-amber-600 font-semibold text-xs text-center">Javascript</p>
-              </div>
-              <div className="bg-teal-200 border-dashed border-2 border-teal-400 rounded-4xl p-1.5 w-fit max-w-32 min-w-16 hover:rotate-3 transition-all">
-                <p className="text-teal-600 font-semibold text-xs text-center">Typescript</p>
-              </div>
-              <div className="bg-orange-200 border-dashed border-2 border-orange-400 rounded-4xl p-1.5 w-fit max-w-32 min-w-16 hover:rotate-3 transition-all">
-                <p className="text-orange-600 font-semibold text-xs text-center">Firebase</p>
-              </div>
-              <div className="bg-red-200 border-dashed border-2 border-red-400 rounded-4xl p-1.5 w-fit max-w-32 min-w-16 hover:rotate-3 transition-all">
-                <p className="text-red-600 font-semibold text-xs text-center">Laravel</p>
-              </div>
-              <div className="bg-blue-200 border-dashed border-2 border-blue-400 rounded-4xl p-1.5 w-fit max-w-32 min-w-16 hover:rotate-3 transition-all">
-                <p className="text-blue-600 font-semibold text-xs text-center">MySQL</p>
-              </div>
-              <div className="bg-green-200 border-dashed border-2 border-green-400 rounded-4xl p-1.5 w-fit max-w-32 min-w-16 hover:rotate-3 transition-all">
-                <p className="text-green-600 font-semibold text-xs text-center">NextJS</p>
-              </div>
-              <div className="bg-green-200 border-dashed border-2 border-green-400 rounded-4xl p-1.5 w-fit max-w-32 min-w-16 hover:rotate-3 transition-all">
-                <p className="text-green-600 font-semibold text-xs text-center">CSS</p>
-              </div>
-
-            </div>
-          </section>
-
-          {/* <div>
-          <div className="bg-pink-200 border border-pink-400 rounded-4xl p-2 w-fit">
-            <p className="text-pink-600 font-semibold text-sm">React Native</p>
           </div>
-        </div> */}
-        </main>
+        </section>
 
+        {/* SKILLS SECTION */}
+        <section className="px-5 w-full space-y-5">
+          <h3 className="font-bold text-black text-2xl">Skills & Tools</h3>
+
+          <SkillCard title="Frontend">
+            <ProgressBar title="React Native" percentage={90} color="#a8bcaf" />
+            <ProgressBar title="TypeScript" percentage={90} color="#a8bcaf" />
+            <ProgressBar title="Next JS" percentage={70} color="#a8bcaf" />
+            <ProgressBar title="Tailwind CSS" percentage={90} color="#a8bcaf" />
+          </SkillCard>
+
+          <SkillCard title="Backend">
+            <ProgressBar title="Node.js" percentage={60} color="#b0b0b0" />
+            <ProgressBar title="Laravel" percentage={85} color="#b0b0b0" />
+            <ProgressBar title="MySQL" percentage={80} color="#b0b0b0" />
+            <ProgressBar title="Firebase" percentage={90} color="#b0b0b0" />
+          </SkillCard>
+
+          <SkillCard title="Tools">
+            <ProgressBar title="Git" percentage={90} color="#88aa94" />
+            <ProgressBar title="Figma" percentage={80} color="#88aa94" />
+            <ProgressBar title="Postman" percentage={85} color="#88aa94" />
+          </SkillCard>
+        </section>
+
+        {/* WORK SECTION */}
+        <section className="px-5 w-full">
+          <h3 className="text-black text-2xl font-semibold mb-2">My work</h3>
+          <div className="flex flex-col gap-2">
+            <Card
+              title="Safinder"
+              description="A dating app designed exclusively for lesbian women and non-binary people. The app provides a safe and inclusive space for users to connect, share their experiences, and find meaningful relationships. I contributed to the development of the app, implementing key features and ensuring a smooth user experience. The app is currently live and available for download on the App Store and Google Play."
+              link="https://safinder.es"
+              imageSrc="/safinder-name.png"
+            />
+            <Card
+              title="Motia"
+              description="An app that helps riders find rides and share their journeys. I contribute to the develpment of the app along with another great developer. The app is currently in private beta, but I&apos;m excited to share it with the world soon!"
+              link=""
+              imageSrc="/motia-name.png"
+            />
+          </div>
+        </section>
+
+
+      </div>
+      <div className="bg-stone-800 w-full p-10 text-white">
+        <div className="max-w-3xl mx-auto">
+          <p className="text-xl font-semibold">Get in touch</p>
+          <p className="mt-2">Feel free to reach out to me via email or connect with me on LinkedIn. I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
+
+          <div className="flex flex-row gap-2 items-center my-3">
+            <Mail className="size-5 text-white" />
+            <a href="mailto:ivettes.business@gmail.com" className="text-white underline">ivettes.business@gmail.com</a>
+          </div>
+
+          <div className="flex flex-row gap-2 items-center">
+            <MapPin className="size-5 text-white" />
+            <p className="text-white">Barcelona, Spain</p>
+          </div>
+
+        </div>
       </div>
     </>
   );
