@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Card({ title, description, imageSrc, link }: { title: string; description: string; imageSrc: string; link: string; }) {
+export default function Card({ title, description, imageSrc, link, stack }: { title: string; description: string; imageSrc: string; link: string; stack?: string[] }) {
     return (
         <div className="bg-white border  border-neutral-300 rounded-3xl shadow-md hover:shadow-lg transition-all w-full mt-5 hover:scale-105 md:m-0">
             <Link href={link} target="_blank">
@@ -18,6 +18,16 @@ export default function Card({ title, description, imageSrc, link }: { title: st
                         </div>
                     </div>
                     <p className="text-black mt-1 text-sm">{description}</p>
+
+                    {stack && (
+                        <div className="flex flex-wrap gap-2 mt-3">
+                            {stack.map((tech, idx) => (
+                                <span key={idx} className="text-xs text-stone-600 bg-stone-100 px-2 py-1 rounded-full">
+                                    {tech}
+                                </span>
+                            ))}
+                        </div>
+                    )}
                 </div>
             </Link>
         </div>

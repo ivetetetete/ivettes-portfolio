@@ -44,7 +44,7 @@ export default function Home() {
           </div>
 
           <p className="text-black mt-6 leading-relaxed">
-            Hi! I&apos;m Ivette Sanjurjo Martínez, a <span className="font-semibold text-stone-500">passionate</span> front-end developer with <span className="font-semibold text-stone-500">2 and a half years hands-on experience</span>. I love creating multiplatform apps that provide seamless user experiences across devices.
+            Hi! I&apos;m Ivette Sanjurjo Martínez, a <span className="font-semibold text-stone-700">passionate</span> frontend developer with <span className="font-semibold text-stone-700">2 and a half years hands-on experience</span>, especialized in React Native. I love creating multiplatform apps that provide seamless user experiences across devices.
           </p>
         </section>
 
@@ -108,12 +108,14 @@ export default function Home() {
               description="A dating app designed exclusively for lesbian women and non-binary people. The app provides a safe and inclusive space for users to connect, share their experiences, and find meaningful relationships. I contributed to the development of the app, implementing key features and ensuring a smooth user experience. The app is currently live and available for download on the App Store and Google Play."
               link="https://safinder.es"
               imageSrc="/safinder-name.png"
+              stack={['Expo', 'Firebase', 'Figma', 'React Native', 'Nativewind', 'Gluestack UI', 'Typescript', 'Git', 'Lucide Icons']}
             />
             <Card
               title="Motia"
-              description="An app that helps riders find rides and share their journeys. I contribute to the develpment of the app along with another great developer. The app is currently in private beta, but I&apos;m excited to share it with the world soon!"
+              description="An app that helps riders find rides and share their journeys. I contribute to the development of the app along with another great developer. The app is currently in private beta, but I&apos;m excited to share it with the world soon!"
               link=""
               imageSrc="/motia-name.png"
+              stack={['Expo', 'Firebase', 'Figma', 'React Native', 'Nativewind', 'Typescript', 'Git', 'Lucide Icons']}
             />
           </div>
         </section>
