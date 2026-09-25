@@ -1,48 +1,41 @@
 import Image from "next/image";
-import { ExternalLink, Github, Layers } from "lucide-react";
+import { ExternalLink, Layers } from "lucide-react";
 
 export default function ProjectsBento() {
   const projects = [
     {
       id: "safinder",
       title: "Safinder",
-      subtitle: "Inclusive Dating & Community App",
       description:
-        "A dating app created exclusively for lesbian women and non-binary people. Designed with a strong focus on safety, privacy, and community — featuring weekly prompt questions for meaningful matches, verified profiles, and seamless cross-platform performance.",
+        "A dating app designed exclusively for lesbian women and non-binary people. The app provides a safe and inclusive space for users to connect, share their experiences, and find meaningful relationships. I contributed to the development of the app, implementing key features and ensuring a smooth user experience. The app is currently live and available for download on the App Store and Google Play.",
       image: "/safinder.png",
       badges: ["In Production", "App Store", "Google Play"],
       badgeColor: "bg-pink-50 text-pink-700 border-pink-200",
       technologies: ["React Native", "TypeScript", "Firebase", "Tailwind CSS", "Mobile UX"],
       liveUrl: "https://safinder.es",
-      isFeatured: true,
     },
     {
       id: "motia",
       title: "Motia",
-      subtitle: "Smart Commute & Ride-Sharing",
       description:
-        "An urban mobility application connecting drivers and passengers to share everyday routes, optimize commute times, and lower vehicular carbon footprints.",
+        "An app that helps riders find rides and share their journeys. I contribute to the develpment of the app along with another great developer. The app is currently in private beta, but I'm excited to share it with the world soon!",
       image: "/motia-name.png",
       badges: ["Private Beta", "Mobile App"],
       badgeColor: "bg-emerald-50 text-emerald-700 border-emerald-200",
       technologies: ["React Native", "TypeScript", "Maps / GPS", "Node.js"],
       liveUrl: null,
-      isFeatured: false,
     },
     {
       id: "findhome",
       title: "Find Home",
-      subtitle: "Real Estate & Valuation Platform",
       description:
-        "Modern real estate web platform developed for an agency in Olot, Girona. Features property sales & rentals catalogs and an interactive multi-step property valuation questionnaire.",
+        "A modern real estate web platform developed for a real estate agency in Catalunya, featuring property sales and rentals catalogs along with an interactive multi-step property valuation questionnaire.",
       image: "/findhome-preview.png",
       imageCover: true,
       badges: ["In Production", "Web Platform"],
       badgeColor: "bg-blue-50 text-blue-700 border-blue-200",
-      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Interactive Forms", "Responsive Web"],
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Interactive Forms"],
       liveUrl: "https://www.find-home.cat/",
-      githubUrl: null,
-      isFeatured: false,
     },
   ];
 
@@ -58,12 +51,9 @@ export default function ProjectsBento() {
             <span>Featured Case Studies</span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-bold text-neutral-900 tracking-tight">
-            Selected Work
+            My work
           </h2>
         </div>
-        <p className="text-xs sm:text-sm text-neutral-500 max-w-sm">
-          Real-world applications built from concept to production on App Store and Google Play.
-        </p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
@@ -82,14 +72,9 @@ export default function ProjectsBento() {
                   ))}
                 </div>
 
-                <div className="flex flex-col md:flex-row md:items-center justify-between gap-2">
-                  <h3 className="text-2xl sm:text-3xl font-bold text-neutral-900">
-                    {featured.title}
-                  </h3>
-                  <span className="text-sm font-medium text-neutral-500">
-                    {featured.subtitle}
-                  </span>
-                </div>
+                <h3 className="text-2xl sm:text-3xl font-bold text-neutral-900">
+                  {featured.title}
+                </h3>
 
                 <p className="text-sm sm:text-base text-neutral-600 mt-3 leading-relaxed">
                   {featured.description}
@@ -137,7 +122,7 @@ export default function ProjectsBento() {
         {secondary.map((proj) => (
           <div
             key={proj.id}
-            className="md:col-span-6 bg-white border border-neutral-200/80 rounded-3xl p-6 sm:p-7 shadow-xs   flex flex-col justify-between group overflow-hidden"
+            className="md:col-span-6 bg-white border border-neutral-200/80 rounded-3xl p-6 sm:p-7 shadow-xs hover:shadow-md transition-all flex flex-col justify-between group overflow-hidden"
           >
             <div>
               <div className="flex items-center justify-between gap-2 mb-4">
@@ -160,11 +145,7 @@ export default function ProjectsBento() {
                     aria-label={`Open ${proj.title}`}
                     className="p-2 rounded-xl text-neutral-500 hover:text-neutral-900 hover:bg-neutral-100 transition-colors"
                   >
-                    {proj.githubUrl ? (
-                      <Github className="size-4" />
-                    ) : (
-                      <ExternalLink className="size-4" />
-                    )}
+                    <ExternalLink className="size-4" />
                   </a>
                 )}
               </div>
@@ -186,9 +167,6 @@ export default function ProjectsBento() {
               <h3 className="text-xl font-bold text-neutral-900">
                 {proj.title}
               </h3>
-              <p className="text-xs font-medium text-neutral-500 mt-0.5">
-                {proj.subtitle}
-              </p>
 
               <p className="text-xs sm:text-sm text-neutral-600 mt-2.5 leading-relaxed">
                 {proj.description}

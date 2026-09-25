@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Download, Github, Linkedin, Mail, MapPin, ArrowDown, Smartphone } from "lucide-react";
+import { Download, Github, Linkedin, Mail, MapPin, ArrowDown, Code } from "lucide-react";
 
 const SOCIAL_LINKS = [
   { icon: Github, href: "https://github.com/ivetetetete", label: "GitHub" },
@@ -7,11 +7,11 @@ const SOCIAL_LINKS = [
   { icon: Mail, href: "mailto:ivettes.business@gmail.com", label: "Email" },
 ];
 
-const HIGHLIGHT_STATS = [
-  { value: "3", label: "Years Experience" },
-  { value: "7+", label: "Projects Delivered" },
-  { value: "Lead", label: "Frontend Initiative" },
-  { value: "100%", label: "Mobile & Web Focus" },
+const STATS = [
+  { label: "years of experience", value: "3" },
+  { label: "projects end to end", value: "7" },
+  { label: "development team", value: "Lead" },
+  { label: "coffees consumed", value: "100+" },
 ];
 
 export default function HeroBento() {
@@ -39,13 +39,13 @@ export default function HeroBento() {
                 Ivette Sanjurjo Martínez
               </h1>
               <p className="text-base sm:text-lg font-medium text-neutral-600 flex items-center gap-1.5 pt-1">
-                <Smartphone className="size-4 text-neutral-500" />
-                <span>Full Stack & Mobile Developer</span>
+                <Code className="size-4 text-neutral-500" />
+                <span>Frontend Developer</span>
               </p>
             </div>
 
-            <p className="text-neutral-600 mt-5 text-sm sm:text-base leading-relaxed max-w-2xl">
-              Passionate developer with <strong className="text-neutral-900 font-semibold">3 years of hands-on experience</strong> creating modern, cross-platform mobile apps and intuitive web interfaces. Dedicated to crafting digital experiences that don&apos;t just function seamlessly, but genuinely feel good to use — with a strong focus on accessibility, clean architecture, and delightful UI.
+            <p className="text-neutral-700 mt-5 text-sm sm:text-base leading-relaxed max-w-2xl">
+              Hi! I&apos;m Ivette Sanjurjo Martínez, a <span className="font-semibold text-stone-600">passionate</span> front-end developer with <span className="font-semibold text-stone-600">3 years hands-on experience</span>. I love creating multiplatform apps that provide seamless user experiences across devices.
             </p>
           </div>
 
@@ -101,19 +101,19 @@ export default function HeroBento() {
           </div>
 
           <div className="w-full pt-4">
-            <div className="text-lg font-semibold text-neutral-500 uppercase tracking">
-              <span>Full Stack Mindset</span>
-            </div>
-            <p className="text-xs text-neutral-500 mt-1">
-              Translating ideas into polished iOS, Android & Web apps.
+            <p className="text-sm font-semibold text-neutral-800">
+              Just a girl who loves coding and coffee.
+            </p>
+            <p className="text-xs text-neutral-500 mt-1 leading-relaxed">
+              Passionate about building products that don’t just work well, but genuinely feel good to use.
             </p>
           </div>
 
           <div className="w-full grid grid-cols-2 gap-2 mt-4 pt-3 border-t border-neutral-100">
-            {HIGHLIGHT_STATS.slice(0, 2).map((stat) => (
+            {STATS.slice(0, 2).map((stat) => (
               <div key={stat.label} className="bg-neutral-50/80 rounded-xl p-2.5 border border-neutral-100">
-                <p className="text-lg font-bold text-neutral-900">{stat.value}</p>
-                <p className="text-[11px] text-neutral-500 leading-tight">{stat.label}</p>
+                <p className="text-base sm:text-lg font-bold text-neutral-900">{stat.value}</p>
+                <p className="text-[10px] text-neutral-500 uppercase tracking-tight leading-tight">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -121,13 +121,13 @@ export default function HeroBento() {
       </div>
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-4">
-        {HIGHLIGHT_STATS.map((stat) => (
+        {STATS.map((stat) => (
           <div
             key={stat.label}
             className="bg-white border border-neutral-200/80 rounded-2xl p-4 text-center hover:bg-neutral-50 hover:shadow-xs transition-all"
           >
-            <p className="text-2xl font-bold text-neutral-900">{stat.value}</p>
-            <p className="text-xs font-medium text-neutral-500 uppercase tracking-wider mt-0.5">{stat.label}</p>
+            <p className="text-xl sm:text-2xl font-bold text-neutral-900">{stat.value}</p>
+            <p className="text-xs font-medium text-neutral-500 uppercase tracking-tight mt-0.5">{stat.label}</p>
           </div>
         ))}
       </div>

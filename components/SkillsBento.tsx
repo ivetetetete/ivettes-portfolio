@@ -3,7 +3,7 @@ import { Code2, Smartphone, Server, Wrench } from "lucide-react";
 export default function SkillsBento() {
   const skillCategories = [
     {
-      category: "Frontend & Mobile",
+      category: "Frontend",
       icon: Smartphone,
       skills: [
         {
@@ -15,7 +15,7 @@ export default function SkillsBento() {
           badgeClass: "bg-blue-50 text-blue-800 border-blue-200 hover:bg-blue-100",
         },
         {
-          name: "Next.js",
+          name: "Next JS",
           badgeClass: "bg-purple-50 text-purple-800 border-purple-200 hover:bg-purple-100",
         },
         {
@@ -27,53 +27,57 @@ export default function SkillsBento() {
           badgeClass: "bg-teal-50 text-teal-800 border-teal-200 hover:bg-teal-100",
         },
         {
-          name: "JavaScript (ES6+)",
+          name: "JavaScript",
           badgeClass: "bg-amber-50 text-amber-800 border-amber-200 hover:bg-amber-100",
         },
         {
-          name: "HTML5 / Semantic CSS",
+          name: "HTML5 / CSS",
           badgeClass: "bg-orange-50 text-orange-800 border-orange-200 hover:bg-orange-100",
-        },
-        {
-          name: "Mobile UI / UX",
-          badgeClass: "bg-pink-50 text-pink-800 border-pink-200 hover:bg-pink-100",
         },
       ],
     },
     {
-      category: "Backend & Cloud",
+      category: "Backend",
       icon: Server,
       skills: [
         {
-          name: "Firebase (Auth, Firestore)",
+          name: "Firebase",
           badgeClass: "bg-amber-50 text-amber-800 border-amber-200 hover:bg-amber-100",
-        },
-        {
-          name: "REST APIs",
-          badgeClass: "bg-emerald-50 text-emerald-800 border-emerald-200 hover:bg-emerald-100",
         },
         {
           name: "Laravel",
           badgeClass: "bg-rose-50 text-rose-800 border-rose-200 hover:bg-rose-100",
         },
         {
-          name: "Node.js",
-          badgeClass: "bg-green-50 text-green-800 border-green-200 hover:bg-green-100",
-        },
-        {
           name: "MySQL",
           badgeClass: "bg-indigo-50 text-indigo-800 border-indigo-200 hover:bg-indigo-100",
         },
         {
-          name: "JSON Web Tokens",
-          badgeClass: "bg-fuchsia-50 text-fuchsia-800 border-fuchsia-200 hover:bg-fuchsia-100",
+          name: "Node.js",
+          badgeClass: "bg-green-50 text-green-800 border-green-200 hover:bg-green-100",
+        },
+        {
+          name: "REST APIs",
+          badgeClass: "bg-emerald-50 text-emerald-800 border-emerald-200 hover:bg-emerald-100",
         },
       ],
     },
     {
-      category: "AI, Delivery & Ecosystem",
+      category: "Tools",
       icon: Wrench,
       skills: [
+        {
+          name: "Git",
+          badgeClass: "bg-stone-100 text-stone-800 border-stone-300 hover:bg-stone-200",
+        },
+        {
+          name: "Figma",
+          badgeClass: "bg-rose-50 text-rose-800 border-rose-200 hover:bg-rose-100",
+        },
+        {
+          name: "Postman",
+          badgeClass: "bg-orange-50 text-orange-800 border-orange-200 hover:bg-orange-100",
+        },
         {
           name: "Prompt Engineering",
           badgeClass: "bg-purple-50 text-purple-800 border-purple-200 hover:bg-purple-100",
@@ -83,24 +87,8 @@ export default function SkillsBento() {
           badgeClass: "bg-violet-50 text-violet-800 border-violet-200 hover:bg-violet-100",
         },
         {
-          name: "Project Delivery",
-          badgeClass: "bg-blue-50 text-blue-800 border-blue-200 hover:bg-blue-100",
-        },
-        {
-          name: "Git & GitHub",
-          badgeClass: "bg-stone-100 text-stone-800 border-stone-300 hover:bg-stone-200",
-        },
-        {
-          name: "Figma Handoff",
-          badgeClass: "bg-rose-50 text-rose-800 border-rose-200 hover:bg-rose-100",
-        },
-        {
           name: "App Store & Play Console",
           badgeClass: "bg-teal-50 text-teal-800 border-teal-200 hover:bg-teal-100",
-        },
-        {
-          name: "WCAG Accessibility",
-          badgeClass: "bg-lime-50 text-lime-800 border-lime-200 hover:bg-lime-100",
         },
       ],
     },
@@ -114,18 +102,15 @@ export default function SkillsBento() {
           <span>Technical Toolkit</span>
         </div>
         <h2 className="text-2xl sm:text-3xl font-bold text-neutral-900 tracking-tight">
-          Skills & Technologies
+          Skills & Tools
         </h2>
-        <p className="text-xs sm:text-sm text-neutral-500 mt-1">
-          Modern stack applied to production mobile apps, websites, AI workflows, and delivery systems.
-        </p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {skillCategories.map((cat) => (
           <div
             key={cat.category}
-            className="bg-white border border-neutral-200/80 rounded-3xl p-6 shadow-xs   flex flex-col justify-between"
+            className="bg-white border border-neutral-200/80 rounded-3xl p-6 shadow-xs hover:shadow-md transition-all flex flex-col justify-between"
           >
             <div>
               <div className="flex items-center gap-2.5 mb-5">
@@ -141,7 +126,7 @@ export default function SkillsBento() {
                 {cat.skills.map((skill) => (
                   <span
                     key={skill.name}
-                    className={`inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-xl border font-medium transition-all duration-200 hover:scale-105 active:scale-95 cursor-default ${skill.badgeClass}`}
+                    className={`inline-flex items-center text-xs px-3 py-1.5 rounded-xl border font-medium transition-all duration-200 hover:scale-105 active:scale-95 cursor-default ${skill.badgeClass}`}
                   >
                     <span>{skill.name}</span>
                   </span>

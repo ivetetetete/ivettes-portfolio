@@ -26,15 +26,15 @@ export default function ContactBento() {
         <div className="relative z-10 max-w-3xl">
           <div className="inline-flex items-center gap-2 text-xs font-semibold px-3 py-1 rounded-full bg-pink-50 text-pink-700 border border-pink-200/80 mb-3">
             <Send className="size-3.5 text-pink-600" />
-            <span className="uppercase">Let&apos;s Connect</span>
+            <span className="uppercase">Get in touch</span>
           </div>
 
           <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-neutral-900">
-            Have a project in mind or want to collaborate?
+            Get in touch
           </h2>
 
-          <p className="text-sm sm:text-base text-neutral-600 mt-4 leading-relaxed max-w-xl">
-            I&apos;m currently open to full-time engineering roles, freelance opportunities, and exciting multiplatform app collaborations. Let&apos;s build something great together.
+          <p className="text-sm sm:text-base text-neutral-700 mt-4 leading-relaxed max-w-xl">
+            Feel free to reach out to me via email or connect with me on LinkedIn. I&apos;m always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -84,7 +84,6 @@ export default function ContactBento() {
                 <MapPin className="size-3.5 text-neutral-400" />
                 Barcelona, Spain
               </span>
-              <span>•</span>
               <a
                 href="mailto:ivettes.business@gmail.com"
                 className="hover:text-neutral-900 transition-colors underline underline-offset-2"
@@ -119,7 +118,7 @@ export default function ContactBento() {
 
       <footer className="mt-8 text-center text-xs text-neutral-500 pb-12 flex flex-col sm:flex-row items-center justify-center gap-2">
         <span className="font-mono font-bold text-neutral-800">{"{ivy.}"}</span>
-        <span>— Ivette Sanjurjo Martínez • 2026.</span>
+        <span>— Ivette Sanjurjo Martínez 2026.</span>
         <span className="flex items-center gap-1 text-neutral-500">
           Crafted with care, Next.js & Tailwind CSS
           <Heart className="size-3 text-pink-500 fill-pink-500 inline ml-0.5" />
