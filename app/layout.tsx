@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { ThemeProvider } from "@/context/ThemeContext";
+import { LanguageProvider } from "@/context/LanguageContext";
 
 const concreticaFont = localFont({
   src: "./fonts/sk-concretica.ttf",
@@ -24,6 +26,8 @@ export const metadata: Metadata = {
     "Barcelona Developer",
     "Safinder",
     "Motia",
+    "Find Home",
+    "Ran Ramen",
   ],
   authors: [{ name: "Ivette Sanjurjo Martínez" }],
   openGraph: {
@@ -47,15 +51,36 @@ export const metadata: Metadata = {
   },
 };
 
+const themeScript = `
+  (function() {
+    try {
+      var saved = localStorage.getItem('portfolio_theme');
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (saved === 'dark' || (!saved && prefersDark)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    } catch (e) {}
+  })();
+`;
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${concreticaFont.variable} antialiased selection:bg-pink-100 selection:text-pink-900`}>
-        {children}
+    <html lang="es" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
+      <body className={`${concreticaFont.variable} antialiased selection:bg-pink-100 selection:text-pink-900 dark:selection:bg-pink-900/60 dark:selection:text-pink-200`}>
+        <ThemeProvider>
+          <LanguageProvider>
+            {children}
+          </LanguageProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
