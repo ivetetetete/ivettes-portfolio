@@ -41,8 +41,6 @@ export default function HeroBento() {
               <p className="text-base sm:text-lg font-medium text-neutral-600 flex items-center gap-1.5 pt-1">
                 <Smartphone className="size-4 text-neutral-500" />
                 <span>Full Stack & Mobile Developer</span>
-                <span className="text-neutral-300">•</span>
-                <span className="text-neutral-500 text-sm">React Native & Next.js</span>
               </p>
             </div>
 

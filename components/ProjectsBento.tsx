@@ -82,12 +82,12 @@ export default function ProjectsBento() {
                   ))}
                 </div>
 
-                <div className="flex items-center gap-2">
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-2">
                   <h3 className="text-2xl sm:text-3xl font-bold text-neutral-900">
                     {featured.title}
                   </h3>
                   <span className="text-sm font-medium text-neutral-500">
-                    — {featured.subtitle}
+                    {featured.subtitle}
                   </span>
                 </div>
 
