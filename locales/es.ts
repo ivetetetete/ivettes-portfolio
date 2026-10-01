@@ -104,7 +104,7 @@ export const es: Translations = {
         title: "Viven Inmobiliaria",
         description:
           "Plataforma web para la agencia inmobiliaria Viven en Vilanova i la Geltrú y el Garraf. Desarrollada con Next.js y conexiones en tiempo real a la API de Inmovilla para la sincronización continua y gestión del catálogo de propiedades.",
-        image: "",
+        image: "/viven-preview.png",
         imageCover: true,
         badges: ["En Producción", "Plataforma Web"],
         badgeColor: "bg-sky-50 text-sky-700 border-sky-200 dark:bg-sky-950/40 dark:text-sky-300 dark:border-sky-800/60",
