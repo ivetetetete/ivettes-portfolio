@@ -100,15 +100,17 @@ export const en: Translations = {
         ctaText: "Visit Safinder.es",
       },
       {
-        id: "motia",
-        title: "Motia",
+        id: "viven",
+        title: "Viven Inmobiliaria",
         description:
-          "An app that helps riders find rides and share their journeys. I contribute to the development of the app along with another great developer. The app is currently in private beta, but I'm excited to share it with the world soon!",
-        image: "/motia-name.png",
-        badges: ["Private Beta", "Mobile App"],
-        badgeColor: "bg-emerald-50 text-emerald-700 border-emerald-200 dark:bg-emerald-950/40 dark:text-emerald-300 dark:border-emerald-800/60",
-        technologies: ["React Native", "TypeScript", "Maps / GPS", "Node.js"],
-        liveUrl: null,
+          "Real estate web platform developed for Viven agency in Vilanova i la Geltrú and the Garraf region. Built with Next.js and real-time connections to the Inmovilla API for continuous property catalog synchronization and management.",
+        image: "",
+        imageCover: true,
+        badges: ["In Production", "Web Platform"],
+        badgeColor: "bg-sky-50 text-sky-700 border-sky-200 dark:bg-sky-950/40 dark:text-sky-300 dark:border-sky-800/60",
+        technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Inmovilla API", "Real-Time"],
+        liveUrl: "https://www.viven.es/es",
+        ctaText: "Visit Viven.es",
       },
       {
         id: "findhome",
@@ -121,6 +123,17 @@ export const en: Translations = {
         badgeColor: "bg-blue-50 text-blue-700 border-blue-200 dark:bg-blue-950/40 dark:text-blue-300 dark:border-blue-800/60",
         technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Interactive Forms"],
         liveUrl: "https://www.find-home.cat/",
+      },
+      {
+        id: "motia",
+        title: "Motia",
+        description:
+          "An app that helps riders find rides and share their journeys. I contribute to the development of the app along with another great developer. The app is currently in private beta, but I'm excited to share it with the world soon!",
+        image: "/motia-name.png",
+        badges: ["Private Beta", "Mobile App"],
+        badgeColor: "bg-emerald-50 text-emerald-700 border-emerald-200 dark:bg-emerald-950/40 dark:text-emerald-300 dark:border-emerald-800/60",
+        technologies: ["React Native", "TypeScript", "Maps / GPS", "Node.js"],
+        liveUrl: null,
       },
       {
         id: "ranramen",

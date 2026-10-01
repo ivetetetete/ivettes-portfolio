@@ -100,15 +100,17 @@ export const ca: Translations = {
         ctaText: "Visitar Safinder.es",
       },
       {
-        id: "motia",
-        title: "Motia",
+        id: "viven",
+        title: "Viven Inmobiliaria",
         description:
-          "Una aplicació que connecta passatgers i conductors per compartir trajectes i viatges. Col·laboro en el desenvolupament de la plataforma juntament amb un altre gran desenvolupador. Actualment en fase beta privada, amb moltes ganes de compartir-la amb el món molt aviat!",
-        image: "/motia-name.png",
-        badges: ["Beta Privada", "App Mòbil"],
-        badgeColor: "bg-emerald-50 text-emerald-700 border-emerald-200 dark:bg-emerald-950/40 dark:text-emerald-300 dark:border-emerald-800/60",
-        technologies: ["React Native", "TypeScript", "Maps / GPS", "Node.js"],
-        liveUrl: null,
+          "Plataforma web per a l'agència immobiliària Viven a Vilanova i la Geltrú i el Garraf. Desenvolupada amb Next.js i connexions en temps real a l'API d'Inmovilla per a la sincronització contínua i gestió del catàleg d'immobles.",
+        image: "/viven-preview.png",
+        imageCover: true,
+        badges: ["En Producció", "Plataforma Web"],
+        badgeColor: "bg-sky-50 text-sky-700 border-sky-200 dark:bg-sky-950/40 dark:text-sky-300 dark:border-sky-800/60",
+        technologies: ["Next.js", "TypeScript", "Tailwind CSS", "API Inmovilla", "Real-Time"],
+        liveUrl: "https://www.viven.es/es",
+        ctaText: "Visitar Viven.es",
       },
       {
         id: "findhome",
@@ -121,6 +123,17 @@ export const ca: Translations = {
         badgeColor: "bg-blue-50 text-blue-700 border-blue-200 dark:bg-blue-950/40 dark:text-blue-300 dark:border-blue-800/60",
         technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Interactive Forms"],
         liveUrl: "https://www.find-home.cat/",
+      },
+      {
+        id: "motia",
+        title: "Motia",
+        description:
+          "Una aplicació que connecta passatgers i conductors per compartir trajectes i viatges. Col·laboro en el desenvolupament de la plataforma juntament amb un altre gran desenvolupador. Actualment en fase beta privada, amb moltes ganes de compartir-la amb el món molt aviat!",
+        image: "/motia-name.png",
+        badges: ["Beta Privada", "App Mòbil"],
+        badgeColor: "bg-emerald-50 text-emerald-700 border-emerald-200 dark:bg-emerald-950/40 dark:text-emerald-300 dark:border-emerald-800/60",
+        technologies: ["React Native", "TypeScript", "Maps / GPS", "Node.js"],
+        liveUrl: null,
       },
       {
         id: "ranramen",

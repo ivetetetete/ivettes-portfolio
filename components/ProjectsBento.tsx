@@ -78,90 +78,120 @@ export default function ProjectsBento() {
                 </div>
               </div>
 
-              <div className="lg:col-span-6 relative w-full h-64 sm:h-80 rounded-2xl overflow-hidden bg-neutral-50 dark:bg-neutral-800/50 border border-neutral-100 dark:border-neutral-800 group-hover:scale-[1.01] transition-transform">
-                <Image
-                  src={featured.image}
-                  alt={featured.title}
-                  fill
-                  className="object-cover object-left-top"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
+              <div className="lg:col-span-6 relative w-full h-64 sm:h-80 rounded-2xl overflow-hidden bg-neutral-50 dark:bg-neutral-800/50 border border-neutral-100 dark:border-neutral-800 group-hover:scale-[1.01] transition-transform flex items-center justify-center">
+                {featured.image ? (
+                  <Image
+                    src={featured.image}
+                    alt={featured.title}
+                    fill
+                    className="object-cover object-left-top"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
+                ) : (
+                  <div className="flex flex-col items-center justify-center gap-2 text-neutral-400 dark:text-neutral-500">
+                    <Layers className="size-8 opacity-40" />
+                  </div>
+                )}
               </div>
             </div>
           </div>
         )}
 
         {/* Secondary Projects */}
-        {secondary.map((proj, idx) => (
-          <div
-            key={proj.id}
-            className={`${
-              idx === 2 && secondary.length === 3
+        {secondary.map((proj, idx) => {
+          const colSpanClass =
+            secondary.length === 3
+              ? idx === 2
                 ? "md:col-span-12 lg:col-span-4"
                 : "md:col-span-6 lg:col-span-4"
-            } bg-white dark:bg-neutral-900 border border-neutral-200/80 dark:border-neutral-800/80 rounded-3xl p-6 sm:p-7 shadow-xs hover:shadow-md transition-all flex flex-col justify-between group overflow-hidden`}
-          >
-            <div>
-              <div className="flex items-center justify-between gap-2 mb-4">
-                <div className="flex flex-wrap gap-1.5">
-                  {proj.badges.map((badge) => (
-                    <span
-                      key={badge}
-                      className={`text-xs px-2.5 py-0.5 rounded-full font-medium border ${proj.badgeColor}`}
+              : secondary.length % 2 === 0
+              ? "md:col-span-6 lg:col-span-6"
+              : "md:col-span-6 lg:col-span-4";
+
+          return (
+            <div
+              key={proj.id}
+              className={`${colSpanClass} bg-white dark:bg-neutral-900 border border-neutral-200/80 dark:border-neutral-800/80 rounded-3xl p-6 sm:p-7 shadow-xs hover:shadow-md transition-all flex flex-col justify-between group overflow-hidden`}
+            >
+              <div>
+                <div className="flex items-center justify-between gap-2 mb-4">
+                  <div className="flex flex-wrap gap-1.5">
+                    {proj.badges.map((badge) => (
+                      <span
+                        key={badge}
+                        className={`text-xs px-2.5 py-0.5 rounded-full font-medium border ${proj.badgeColor}`}
+                      >
+                        {badge}
+                      </span>
+                    ))}
+                  </div>
+
+                  {proj.liveUrl && (
+                    <a
+                      href={proj.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Open ${proj.title}`}
+                      className="p-2 rounded-xl text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
                     >
-                      {badge}
-                    </span>
-                  ))}
+                      <ExternalLink className="size-4" />
+                    </a>
+                  )}
                 </div>
 
-                {proj.liveUrl && (
+                {proj.liveUrl ? (
                   <a
                     href={proj.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={`Open ${proj.title}`}
-                    className="p-2 rounded-xl text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+                    aria-label={`Visit ${proj.title}`}
+                    className="block relative w-full h-36 rounded-xl overflow-hidden bg-neutral-50 dark:bg-neutral-800/50 border border-neutral-100 dark:border-neutral-800 mb-4 flex items-center justify-center"
                   >
-                    <ExternalLink className="size-4" />
+                    {proj.image ? (
+                      <Image
+                        src={proj.image}
+                        alt={proj.title}
+                        fill
+                        className={`transition-transform duration-300 ${
+                          proj.imageCover
+                            ? "object-cover group-hover:scale-105"
+                            : "object-contain p-4 group-hover:scale-105"
+                        }`}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
+                    ) : (
+                      <div className="w-full h-full flex flex-col items-center justify-center gap-2 text-neutral-400 dark:text-neutral-500 bg-neutral-100/60 dark:bg-neutral-800/40">
+                        <ExternalLink className="size-6 opacity-40 group-hover:opacity-80 group-hover:scale-110 transition-all" />
+                        <span className="text-xs font-medium opacity-60">
+                          {proj.title}
+                        </span>
+                      </div>
+                    )}
                   </a>
+                ) : (
+                  <div className="relative w-full h-36 rounded-xl overflow-hidden bg-neutral-50 dark:bg-neutral-800/50 border border-neutral-100 dark:border-neutral-800 mb-4 flex items-center justify-center">
+                    {proj.image ? (
+                      <Image
+                        src={proj.image}
+                        alt={proj.title}
+                        fill
+                        className={`transition-transform duration-300 ${
+                          proj.imageCover
+                            ? "object-cover group-hover:scale-105"
+                            : "object-contain p-4 group-hover:scale-105"
+                        }`}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
+                    ) : (
+                      <div className="w-full h-full flex flex-col items-center justify-center gap-2 text-neutral-400 dark:text-neutral-500 bg-neutral-100/60 dark:bg-neutral-800/40">
+                        <Layers className="size-6 opacity-40" />
+                        <span className="text-xs font-medium opacity-60">
+                          {proj.title}
+                        </span>
+                      </div>
+                    )}
+                  </div>
                 )}
-              </div>
-
-              {proj.liveUrl ? (
-                <a
-                  href={proj.liveUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`Visit ${proj.title}`}
-                  className="block relative w-full h-36 rounded-xl overflow-hidden bg-neutral-50 dark:bg-neutral-800/50 border border-neutral-100 dark:border-neutral-800 mb-4"
-                >
-                  <Image
-                    src={proj.image}
-                    alt={proj.title}
-                    fill
-                    className={`transition-transform duration-300 ${
-                      proj.imageCover
-                        ? "object-cover group-hover:scale-105"
-                        : "object-contain p-4 group-hover:scale-105"
-                    }`}
-                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
-                </a>
-              ) : (
-                <div className="relative w-full h-36 rounded-xl overflow-hidden bg-neutral-50 dark:bg-neutral-800/50 border border-neutral-100 dark:border-neutral-800 mb-4 flex items-center justify-center">
-                  <Image
-                    src={proj.image}
-                    alt={proj.title}
-                    fill
-                    className={`transition-transform duration-300 ${
-                      proj.imageCover
-                        ? "object-cover group-hover:scale-105"
-                        : "object-contain p-4 group-hover:scale-105"
-                    }`}
-                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
-                </div>
-              )}
 
               <h3 className="text-xl font-bold text-neutral-900 dark:text-neutral-100">
                 {proj.liveUrl ? (
@@ -196,7 +226,8 @@ export default function ProjectsBento() {
               </div>
             </div>
           </div>
-        ))}
+        );
+      })}
       </div>
     </section>
   );
