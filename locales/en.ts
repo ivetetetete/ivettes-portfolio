@@ -147,6 +147,17 @@ export const en: Translations = {
         technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Lucide Icons"],
         liveUrl: "https://ran-ramen-web.vercel.app/",
       },
+      {
+        id: "paperless",
+        title: "Paperless",
+        description:
+          "Cross-platform desktop floating sticky notes app featuring Notion-style / slash commands, a transparent canvas that allows interacting with background windows, and local auto-save. Includes a landing page with automatic OS detection and continuous delivery via GitHub Actions.",
+        image: "/paperless.png",
+        badges: ["In Production", "Desktop App"],
+        badgeColor: "bg-amber-50 text-amber-700 border-amber-200 dark:bg-amber-950/40 dark:text-amber-300 dark:border-amber-800/60",
+        technologies: ["Electron", "GitHub Actions", "Cross-Platform"],
+        liveUrl: "http://paperless-docs-nine.vercel.app/",
+      },
     ],
   },
   skills: {

@@ -53,13 +53,13 @@ export default function ExperienceTimeline() {
             {t.experience.roles.map((role, idx) => (
               <div
                 key={role.title}
-                className="relative pl-6 sm:pl-8 border-l-2 border-neutral-200 dark:border-neutral-800 hover:border-neutral-900 dark:hover:border-neutral-100 transition-colors group"
+                className="relative pl-6 sm:pl-8 border-l-2 border-neutral-200 dark:border-neutral-800 transition-colors group"
               >
                 <div
                   className={`absolute -left-[9px] top-1.5 size-4 rounded-full border-2 transition-all ${
                     idx === 0
                       ? "bg-purple-600 border-purple-600 ring-4 ring-purple-100 dark:ring-purple-900/50"
-                      : "bg-white dark:bg-neutral-900 border-neutral-400 dark:border-neutral-600 group-hover:border-neutral-900 dark:group-hover:border-neutral-100 group-hover:bg-neutral-900 dark:group-hover:bg-white"
+                      : "bg-white dark:bg-neutral-900 border-neutral-400 dark:border-neutral-600"
                   }`}
                 />
 

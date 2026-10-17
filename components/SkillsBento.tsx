@@ -46,6 +46,11 @@ export default function SkillsBento() {
           badgeClass:
             "bg-orange-50 dark:bg-orange-950/40 text-orange-800 dark:text-orange-300 border-orange-200 dark:border-orange-800/60 hover:bg-orange-100 dark:hover:bg-orange-900/50",
         },
+        {
+          name: "Electron",
+          badgeClass:
+            "bg-indigo-50 dark:bg-indigo-950/40 text-indigo-800 dark:text-indigo-300 border-indigo-200 dark:border-indigo-800/60 hover:bg-indigo-100 dark:hover:bg-indigo-900/50",
+        },
       ],
     },
     {

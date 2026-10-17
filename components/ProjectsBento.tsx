@@ -104,6 +104,12 @@ export default function ProjectsBento() {
               ? idx === 2
                 ? "md:col-span-12 lg:col-span-4"
                 : "md:col-span-6 lg:col-span-4"
+              : secondary.length === 5
+              ? idx < 3
+                ? "md:col-span-6 lg:col-span-4"
+                : idx === 4
+                ? "md:col-span-12 lg:col-span-6"
+                : "md:col-span-6 lg:col-span-6"
               : secondary.length % 2 === 0
               ? "md:col-span-6 lg:col-span-6"
               : "md:col-span-6 lg:col-span-4";

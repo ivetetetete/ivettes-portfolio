@@ -147,6 +147,17 @@ export const es: Translations = {
         technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Lucide Icons"],
         liveUrl: "https://ran-ramen-web.vercel.app/",
       },
+      {
+        id: "paperless",
+        title: "Paperless",
+        description:
+          "Aplicación de escritorio multiplataforma de notas adhesivas flotantes (post-its) con comandos rápidos / al estilo Notion, lienzo transparente que permite interactuar con las ventanas de fondo y guardado automático local. Incluye landing page con detección automática de sistema operativo y distribución continua mediante GitHub Actions.",
+        image: "/paperless.png",
+        badges: ["En Producción", "App de Escritorio"],
+        badgeColor: "bg-amber-50 text-amber-700 border-amber-200 dark:bg-amber-950/40 dark:text-amber-300 dark:border-amber-800/60",
+        technologies: ["Electron", "GitHub Actions", "Multiplataforma"],
+        liveUrl: "http://paperless-docs-nine.vercel.app/",
+      },
     ],
   },
   skills: {
