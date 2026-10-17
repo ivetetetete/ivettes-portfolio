@@ -18,7 +18,7 @@ export const en: Translations = {
       passionate: "passionate",
       experience: "3 years hands-on experience",
       description:
-        " front-end developer with hands-on experience. I love creating multiplatform apps that provide seamless user experiences across devices.",
+        " front-end developer. I love creating multiplatform apps that provide seamless user experiences across devices.",
     },
     viewWork: "View My Work",
     downloadCv: "Download CV",

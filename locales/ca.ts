@@ -18,7 +18,7 @@ export const ca: Translations = {
       passionate: "apassionada",
       experience: "3 anys d'experiència pràctica",
       description:
-        " desenvolupadora front-end amb experiència pràctica. M'encanta crear aplicacions multiplataforma que ofereixen experiències d'usuari fluides en tots els dispositius.",
+        " desenvolupadora front-end. M'encanta crear aplicacions multiplataforma que ofereixen experiències d'usuari fluides en tots els dispositius.",
     },
     viewWork: "Veure els meus projectes",
     downloadCv: "Descarregar CV",

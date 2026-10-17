@@ -18,7 +18,7 @@ export const es: Translations = {
       passionate: "apasionada",
       experience: "3 años de experiencia práctica",
       description:
-        " desarrolladora front-end con experiencia práctica. Me encanta crear aplicaciones multiplataforma que ofrecen experiencias fluidas en todos los dispositivos.",
+        " desarrolladora front-end. Me encanta crear aplicaciones multiplataforma que ofrecen experiencias fluidas en todos los dispositivos.",
     },
     viewWork: "Ver mis proyectos",
     downloadCv: "Descargar CV",
