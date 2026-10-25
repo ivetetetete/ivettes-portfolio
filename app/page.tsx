@@ -7,11 +7,14 @@ import ContactBento from "@/components/ContactBento";
 
 export default function Home() {
   return (
-    <>
+    <div className="relative min-h-screen overflow-hidden">
+      {/* Subtle Dot Pattern */}
+      <div className="fixed inset-0 -z-10 pointer-events-none bg-dot-pattern" />
+
       <FloatingNavbar />
       <main
         id="top"
-        className="min-h-screen max-w-5xl mx-auto px-4 sm:px-6 pt-24 sm:pt-28 pb-12 flex flex-col gap-10 sm:gap-14"
+        className="relative z-10 min-h-screen max-w-5xl mx-auto px-4 sm:px-6 pt-24 sm:pt-28 pb-12 flex flex-col gap-10 sm:gap-14"
       >
         <HeroBento />
 
@@ -27,6 +30,6 @@ export default function Home() {
 
         <ContactBento />
       </main>
-    </>
+    </div>
   );
 }

@@ -40,9 +40,18 @@ export interface ExperienceRole {
   badge: string;
   badgeColor: string;
   type: string;
+  current?: boolean;
   bullets?: string[];
   description?: string;
   technologies: string[];
+}
+
+export interface ExperienceCompany {
+  name: string;
+  location: string;
+  period: string;
+  logo: string;
+  roles: ExperienceRole[];
 }
 
 export interface ExperienceTranslations {
@@ -53,6 +62,7 @@ export interface ExperienceTranslations {
   companyLocation: string;
   companyPeriod: string;
   roles: ExperienceRole[];
+  companies: ExperienceCompany[];
 }
 
 export interface ProjectItem {

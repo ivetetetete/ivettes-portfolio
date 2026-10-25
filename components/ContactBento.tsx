@@ -21,9 +21,7 @@ export default function ContactBento() {
 
   return (
     <section id="contact" className="w-full scroll-mt-20">
-      <div className="bg-white dark:bg-neutral-900 border border-neutral-200/80 dark:border-neutral-800/80 rounded-3xl p-6 sm:p-10 shadow-xs relative overflow-hidden transition-colors">
-        <div className="absolute -bottom-20 -right-20 size-80 bg-gradient-to-tr from-pink-100/70 via-purple-100/40 to-transparent dark:from-pink-500/10 dark:via-purple-500/5 dark:to-transparent rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute -top-16 -left-16 size-64 bg-gradient-to-br from-stone-100/80 to-transparent dark:from-neutral-800/30 dark:to-transparent rounded-full blur-2xl pointer-events-none" />
+      <div className="bg-white dark:bg-neutral-900 border border-neutral-200/90 dark:border-neutral-800 rounded-3xl p-6 sm:p-10 shadow-xs relative overflow-hidden transition-colors">
 
         <div className="relative z-10 max-w-3xl">
           <div className="inline-flex items-center gap-2 text-xs font-semibold px-3 py-1 rounded-full bg-pink-50 dark:bg-pink-950/40 text-pink-700 dark:text-pink-300 border border-pink-200/80 dark:border-pink-800/60 mb-3">

@@ -14,8 +14,8 @@ export default function HeroBento() {
   const { t } = useLanguage();
 
   const stats = [
-    { label: t.hero.stats.yearsOfExperience, value: "3" },
-    { label: t.hero.stats.projectsEndToEnd, value: "7" },
+    { label: t.hero.stats.yearsOfExperience, value: "3+" },
+    { label: t.hero.stats.projectsEndToEnd, value: "7+" },
     { label: t.hero.stats.developmentTeam, value: t.hero.stats.leadValue },
     { label: t.hero.stats.coffeesConsumed, value: "100+" },
   ];
@@ -24,41 +24,36 @@ export default function HeroBento() {
     <section className="w-full">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
         {/* Main Hero Card */}
-        <div className="md:col-span-8 bg-white dark:bg-neutral-900 border border-neutral-200/80 dark:border-neutral-800/80 rounded-3xl p-6 sm:p-8 shadow-xs flex flex-col justify-between relative overflow-hidden transition-colors">
+        <div className="md:col-span-8 bg-white dark:bg-neutral-900 border border-neutral-200/90 dark:border-neutral-800 rounded-3xl p-6 sm:p-8 shadow-xs flex flex-col justify-between relative overflow-hidden transition-colors">
           <div className="relative z-10">
             <div className="flex flex-wrap items-center gap-2 mb-6">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 border border-emerald-200/70 dark:border-emerald-800/60">
                 <span className="size-2 rounded-full bg-emerald-500 pulse-dot" />
                 {t.hero.availableBadge}
               </span>
-              <span className="inline-flex items-center gap-1 text-xs text-neutral-500 dark:text-neutral-400 bg-neutral-100 dark:bg-neutral-800/80 px-2.5 py-1 rounded-full border border-neutral-200/60 dark:border-neutral-700/60">
-                <MapPin className="size-3 text-neutral-400" />
+              <span className="inline-flex items-center gap-1 text-xs text-neutral-600 dark:text-neutral-300 bg-neutral-100 dark:bg-neutral-800/80 px-2.5 py-1 rounded-full border border-neutral-200/70 dark:border-neutral-700/60">
+                <MapPin className="size-3 text-pink-500 dark:text-pink-400" />
                 {t.hero.location}
               </span>
             </div>
 
             <div className="space-y-1">
-              <div className="text-3xl sm:text-4xl font-mono font-bold tracking-tight text-neutral-900 dark:text-neutral-100 typewriter">
+              <div className="text-3xl sm:text-4xl font-mono font-bold tracking-tight text-pink-600 dark:text-pink-400 typewriter">
                 {"{ivy.}"}
               </div>
               <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-neutral-900 dark:text-neutral-100 tracking-tight">
                 Ivette Sanjurjo Martínez
               </h1>
               <p className="text-base sm:text-lg font-medium text-neutral-600 dark:text-neutral-400 flex items-center gap-1.5 pt-1">
-                <Code className="size-4 text-neutral-500 dark:text-neutral-400" />
+                <Code className="size-4 text-neutral-500 dark:text-neutral-400 shrink-0" />
                 <span>{t.hero.role}</span>
               </p>
             </div>
 
             <p className="text-neutral-700 dark:text-neutral-300 mt-5 text-sm sm:text-base leading-relaxed max-w-2xl">
               {t.hero.bio.greeting}
-              <span className="font-semibold text-stone-600 dark:text-stone-300">
+              <span className="font-semibold text-pink-700 dark:text-pink-300">
                 {t.hero.bio.passionate}
-              </span>
-              {" "}
-              {t.hero.bio.description.split("hands-on experience")[0] ? "" : ""}
-              <span className="font-semibold text-stone-600 dark:text-stone-300">
-                {t.hero.bio.experience}
               </span>
               {t.hero.bio.description}
             </p>
@@ -93,20 +88,18 @@ export default function HeroBento() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={link.label}
-                  className="p-2.5 rounded-xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white hover:bg-white dark:hover:bg-neutral-700 hover:border-neutral-300 dark:hover:border-neutral-600 hover:scale-110 active:scale-95 transition-all shadow-2xs"
+                  className="p-2.5 rounded-xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 hover:text-pink-600 dark:hover:text-pink-300 hover:bg-pink-50 dark:hover:bg-neutral-700 hover:border-pink-200 dark:hover:border-neutral-600 hover:scale-110 active:scale-95 transition-all shadow-2xs"
                 >
                   <link.icon className="size-4.5" />
                 </a>
               ))}
             </div>
           </div>
-
-          <div className="absolute -top-16 -right-16 size-48 bg-gradient-to-br from-pink-100/60 to-purple-100/30 dark:from-pink-500/10 dark:to-purple-500/5 rounded-full blur-2xl pointer-events-none" />
         </div>
 
         {/* Profile Card */}
-        <div className="md:col-span-4 bg-white dark:bg-neutral-900 border border-neutral-200/80 dark:border-neutral-800/80 rounded-3xl p-5 shadow-xs flex flex-col items-center justify-between text-center relative overflow-hidden group transition-colors">
-          <div className="relative w-full aspect-square max-w-[240px] rounded-full overflow-hidden bg-gradient-to-b from-stone-100 to-stone-200/80 dark:from-neutral-800 dark:to-neutral-800/60 border border-neutral-200/60 dark:border-neutral-700/60 flex items-center justify-center p-2">
+        <div className="md:col-span-4 bg-white dark:bg-neutral-900 border border-neutral-200/90 dark:border-neutral-800 rounded-3xl p-5 shadow-xs flex flex-col items-center justify-between text-center relative overflow-hidden group transition-colors">
+          <div className="relative w-full aspect-square max-w-[235px] rounded-full overflow-hidden bg-stone-100 dark:bg-neutral-800 flex items-center justify-center">
             <Image
               src="/profile.png"
               alt="Ivette Sanjurjo"
@@ -148,7 +141,7 @@ export default function HeroBento() {
         {stats.map((stat) => (
           <div
             key={stat.label}
-            className="bg-white dark:bg-neutral-900 border border-neutral-200/80 dark:border-neutral-800/80 rounded-2xl p-4 text-center hover:bg-neutral-50 dark:hover:bg-neutral-800/60 hover:shadow-xs transition-all"
+            className="bg-white dark:bg-neutral-900 border border-neutral-200/80 dark:border-neutral-800/80 rounded-2xl p-4 text-center hover:bg-neutral-50 dark:hover:bg-neutral-800/60 hover:shadow-xs transition-all flex flex-col items-center justify-center"
           >
             <p className="text-xl sm:text-2xl font-bold text-neutral-900 dark:text-neutral-100">
               {stat.value}

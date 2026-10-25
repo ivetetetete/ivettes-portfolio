@@ -58,7 +58,7 @@ export default function FloatingNavbar() {
       >
         <a
           href="#top"
-          className="font-mono font-bold text-xs sm:text-base text-neutral-900 dark:text-neutral-100 px-1.5 sm:px-2.5 py-1 rounded-xl hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors shrink-0"
+          className="font-mono font-bold text-xs sm:text-base text-pink-600 dark:text-pink-400 px-1.5 sm:px-2.5 py-1 rounded-xl hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors shrink-0"
         >
           {"{ivy.}"}
         </a>

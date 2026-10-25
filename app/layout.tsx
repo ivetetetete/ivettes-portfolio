@@ -12,16 +12,19 @@ const concreticaFont = localFont({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ivettesanjurjo.com"),
-  title: "Ivette Sanjurjo | Full Stack & Mobile Developer",
+  title: "Ivette Sanjurjo | IT Project Manager & AI Solutions Specialist",
   description:
-    "Portfolio of Ivette Sanjurjo Martínez — Full Stack & Mobile Developer specializing in React Native, TypeScript, Next.js and building accessible, user-friendly digital experiences.",
+    "Portfolio of Ivette Sanjurjo Martínez — Software Developer, IT Project Manager & AI Solutions Specialist building inclusive, accessible digital products with React, React Native, TypeScript, Firebase & Laravel.",
   keywords: [
     "Ivette Sanjurjo",
+    "IT Project Manager",
+    "AI Solutions Specialist",
     "Frontend Developer",
     "Mobile Developer",
     "React Native",
     "TypeScript",
     "Next.js",
+    "Laravel Filament",
     "Tailwind CSS",
     "Barcelona Developer",
     "Safinder",
@@ -31,9 +34,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Ivette Sanjurjo Martínez" }],
   openGraph: {
-    title: "Ivette Sanjurjo | Full Stack & Mobile Developer",
+    title: "Ivette Sanjurjo | IT Project Manager & AI Solutions Specialist",
     description:
-      "Crafting intuitive web & mobile apps with React Native, TypeScript and Next.js.",
+      "Software Developer & IT Project Manager crafting intuitive web & mobile apps with React, React Native, TypeScript, Laravel and AI solutions.",
     type: "website",
     locale: "en_US",
     images: [

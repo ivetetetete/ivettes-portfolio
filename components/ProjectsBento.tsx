@@ -15,9 +15,9 @@ export default function ProjectsBento() {
     <section id="work" className="w-full scroll-mt-20">
       <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-6 gap-2">
         <div>
-          <div className="flex items-center gap-2 text-xs font-semibold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider mb-1">
-            <Layers className="size-3.5 text-neutral-600 dark:text-neutral-400" />
-            <span>{t.projects.sectionTag}</span>
+          <div className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1 rounded-full bg-pink-50 dark:bg-pink-950/40 text-pink-700 dark:text-pink-300 border border-pink-200/80 dark:border-pink-800/60 mb-2">
+            <Layers className="size-3.5 text-pink-600 dark:text-pink-400" />
+            <span className="uppercase">{t.projects.sectionTag}</span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-bold text-neutral-900 dark:text-neutral-100 tracking-tight">
             {t.projects.title}
@@ -28,8 +28,8 @@ export default function ProjectsBento() {
       <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
         {/* Featured Project */}
         {featured && (
-          <div className="md:col-span-12 bg-white dark:bg-neutral-900 border border-neutral-200/80 dark:border-neutral-800/80 rounded-3xl p-6 sm:p-8 shadow-xs hover:shadow-md transition-all group overflow-hidden">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+          <div className="md:col-span-12 bg-white dark:bg-neutral-900 border border-pink-200/90 dark:border-pink-900/50 rounded-3xl p-6 sm:p-8 shadow-xs hover:shadow-md hover:border-pink-300 dark:hover:border-pink-800/80 transition-all group overflow-hidden relative">
+            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
               <div className="lg:col-span-6 flex flex-col justify-between h-full space-y-4">
                 <div>
                   <div className="flex flex-wrap items-center gap-2 mb-3">
@@ -57,7 +57,7 @@ export default function ProjectsBento() {
                     {featured.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="text-xs px-2.5 py-1 rounded-lg bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 font-medium"
+                        className="text-xs px-2.5 py-1 rounded-lg bg-pink-50/70 dark:bg-neutral-800 text-pink-900 dark:text-pink-200 border border-pink-200/70 dark:border-neutral-700 font-medium"
                       >
                         {tech}
                       </span>
@@ -69,7 +69,7 @@ export default function ProjectsBento() {
                       href={featured.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-pink-600 text-white text-sm font-medium hover:bg-pink-700 transition-all hover:scale-[1.02] active:scale-[0.98] shadow-xs"
+                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-pink-600 hover:bg-pink-700 text-white text-sm font-medium transition-all hover:scale-[1.02] active:scale-[0.98] shadow-xs"
                     >
                       <span>{featured.ctaText || `Visit ${featured.title}`}</span>
                       <ExternalLink className="size-4" />
@@ -117,7 +117,7 @@ export default function ProjectsBento() {
           return (
             <div
               key={proj.id}
-              className={`${colSpanClass} bg-white dark:bg-neutral-900 border border-neutral-200/80 dark:border-neutral-800/80 rounded-3xl p-6 sm:p-7 shadow-xs hover:shadow-md transition-all flex flex-col justify-between group overflow-hidden`}
+              className={`${colSpanClass} bg-white dark:bg-neutral-900 border border-neutral-200/90 dark:border-neutral-800 rounded-3xl p-6 sm:p-7 shadow-xs hover:shadow-md hover:-translate-y-0.5 transition-all flex flex-col justify-between group overflow-hidden`}
             >
               <div>
                 <div className="flex items-center justify-between gap-2 mb-4">
